@@ -22,14 +22,18 @@ Execution options specify how the R code in your Quarto document should be displ
 
 **Question 2** -- Add an `execute` line to your YAML that includes the following options, (1) your source code is always output on the page, and (2) your document will render even if there are errors.
 
-## Running the Provided Code
+## Tooth Growth Dataset
 
 ```{r}
 #| eval: false
 #| echo: true
 #| label: practicing-running-code
 
-1 + 1
+# Load a dataset into the R Environment.
+data(ToothGrowth)
+
+# Look at the summary of the variables in the dataset.
+summary(ToothGrowth)
 ```
 
 **Question 3** -- Let's spice this code up a bit. Delete `1 + 1` from the code chunk and paste in the code provided in the Lab 1 instructions.
@@ -38,11 +42,11 @@ Execution options specify how the R code in your Quarto document should be displ
 
 **Question 4** -- In your **console** (*not* in the Quarto document), type `?ToothGrowth` (or alternatively `help(ToothGrowth)`.Use the information that pops up in the *Help* pane in RStudio to fill in the blanks below.
 
-*This dataset investigates the effect of \_\_\_\_\_ on tooth growth in \_\_\_\_.*
+*This dataset investigates the effect of Vitamin C on tooth growth in Guinea Pigs.*
 
-*The two supplement delivery methods include OJ (\_\_\_\_) and VC (\_\_\_\_).*
+*The two supplement delivery methods include OJ (orange juice) and VC (ascorbic acid).*
 
-*`ToothGrowth` is a data frame with **observations and*** \_ variables.
+*`ToothGrowth` is a data frame with 60 **observations and*** 3 variables.
 
 **Question 5** -- *Before* the code chunk, change the "Running the Provided Code" section header to a header that better describes the contents of this section (e.g., Tooth Growth Dataset).
 
