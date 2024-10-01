@@ -81,12 +81,13 @@ Now, run this code chunk! You should see two side-by-side boxplots, one plot com
 
 **Question 9** -- Specify a **figure caption** for the boxplots (using a code-chunk option).
 
-## Supplement Delivery Effect on Mean Tooth Length
+## Supplement Type Effect on Mean Tooth Length T-test
 
 ```{r}
 # Question 10
 t.test(len ~ supp, var.equal = FALSE, data = ToothGrowth)
 
-#Question 11
-list(conclusion = "We fail to reject the null hypothesis that there is no difference in mean tooth length between ")
+#Question 12
+my_list <- list("We fail to reject the null hypothesis that there is no difference in mean tooth length between supplement methods because we have a p-value > 0.05 which is our significance level.", "We are 95% certain that there is no difference in mean tooth length across supplement type.")
+my_list
 ```
